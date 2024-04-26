@@ -12,8 +12,8 @@ using MiniFacebookProject1.Models;
 namespace MiniFacebookProject1.Migrations
 {
     [DbContext(typeof(MiniFbDbContext))]
-    [Migration("20240425170501_v1")]
-    partial class v1
+    [Migration("20240426134356_Intial T1")]
+    partial class IntialT1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

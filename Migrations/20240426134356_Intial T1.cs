@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MiniFacebookProject1.Migrations
 {
     /// <inheritdoc />
-    public partial class v1 : Migration
+    public partial class IntialT1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
