@@ -2,14 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MiniFacebookProject1.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace MiniFacebookProject1.Areas.Identity.Pages.Account.Manage
 {
@@ -30,7 +27,12 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public string Username { get; set; }
+        //public string Username { get; set; }
+        //public string Name { get; set; }
+        //public string Gender { get; set; }
+        //public string Bio { get; set; }
+        //public string Phone { get; set; }
+
         //public byte[] PhotoData { get; set; }
         //public string PhotoContentType { get; set; }
         public string ImageFileName { get; set; }
@@ -62,6 +64,12 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            public string Username { get; set; }
+            public string Name { get; set; }
+            public string Gender { get; set; }
+            public string Bio { get; set; }
+            public string Phone { get; set; }
         }
 
         private async Task LoadAsync(User user)
@@ -74,12 +82,16 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account.Manage
             ImageFileName = user.ImageFileName;
 
 
-
-            Username = userName;
-
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Name = user.Name,
+                Bio = user.BIO,
+                Gender = user.Gender,
+                Phone = user.Phone,
+
+
+                Username = userName
             };
         }
 
