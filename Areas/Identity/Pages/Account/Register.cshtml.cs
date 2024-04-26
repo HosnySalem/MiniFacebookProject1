@@ -84,6 +84,9 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            [Required]
+            [Display(Name = "Name")]
+            public string Name { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -144,6 +147,7 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account
                 user.BIO = Input.BIO;
                 user.Phone = Input.Phone;
                 user.BirthDate = Input.BirthDate;
+                user.Name = Input.Name;
 
                 // Save photo if provided
                 //if (Input.Photo != null && Input.Photo.Length > 0)

@@ -55,10 +55,11 @@ namespace MiniFacebookProject1
             app.MapRazorPages();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Posts}/{action=Index}/{id?}");
 
 
             app.Run();
+
         }
     }
 }

@@ -24,6 +24,8 @@ namespace MiniFacebookProject1.Controllers
         // GET: Posts
         public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.user=user;
             var posts = _context.Posts.Include(p=>p.User).OrderByDescending(p => p.DateOfCreation).ToList();
             return View(posts);
         }

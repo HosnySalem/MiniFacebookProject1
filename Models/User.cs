@@ -7,6 +7,7 @@ namespace MiniFacebookProject1.Models
     {
         //public byte[]? Photo { get; set; }
         //public string? PhotoContentType { get; set; }
+        public string Name { get; set; }
 
         public string ImageFileName { get; set; }
         [MaxLength(100)]
