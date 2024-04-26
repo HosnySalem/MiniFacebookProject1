@@ -31,8 +31,8 @@ namespace MiniFacebookProject1.Areas.Identity.Pages.Account.Manage
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
         public string Username { get; set; }
-        public byte[] PhotoData { get; set; }
-        public string PhotoContentType { get; set; }
+        //public byte[] PhotoData { get; set; }
+        //public string PhotoContentType { get; set; }
         public string ImageFileName { get; set; }
 
         /// <summary>

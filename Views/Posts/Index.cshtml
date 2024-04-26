@@ -1,5 +1,8 @@
 ﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Identity
 @model IEnumerable<MiniFacebookProject1.Models.Post>
+
+@inject UserManager<User> UserManager
 
 @{
     ViewData["Title"] = "Index";
@@ -67,7 +70,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Content)
             </td>
-            <td>
+                <td>
+                    @* <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@item.User.Email</a> *@
                 @Html.DisplayFor(modelItem => item.User.Email)
             </td>
                 @if (User.Identity.IsAuthenticated && item.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
